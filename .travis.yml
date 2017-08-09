@@ -1,17 +1,4 @@
-sudo: required 
 language: node_js
 node_js:
   - "iojs"
   - "6"
-addons:
-  sauce_connect:
-    username: "cs-rodolfo-costa"
-    access_key: "4ab68b10-2996-41ae-ac73-9c3a61eccde7"
-before_install:
-  - export CHROME_BIN=/usr/bin/google-chrome
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sudo apt-get update
-  - sudo apt-get install -y libappindicator1 fonts-liberation
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i google-chrome*.deb
